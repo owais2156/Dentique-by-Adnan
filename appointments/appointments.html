@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../icons/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <img src="../icons/logo.png" class="logo">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../courses/index.html">Courses</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+        <div class="social-bar">
+            <a href="https://instagram.com/7adnaaann" target="_blank" aria-label="Instagram">
+                <img src="../icons/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="../icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <img src="../icons/twitter.png" alt="Twitter"></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="../icons/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://wa.me/+919541573513" target="_blank" aria-label="WhatsApp">
+                <img src="../icons/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+
+        <form class="form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" placeholder="Enter your Name" required><br>
+            <label for="gender">Gender</label>
+            <fieldset>
+                <input type="radio" id="male" name="Gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="Gender" value="female">
+                <label for="female">Female</label>
+            </fieldset>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone" placeholder="Enter your Phone Number" required><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="Enter your Email" required><br>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="Address" placeholder="Enter your Address" required><br>
+            <label for="clinic">Choose a Clinic Location</label>
+            <select class="dropdown" id="clinic" name="clinic">
+                <option disabled selected>-- Location --</option>
+                <option value="Pulwama">Pulwama</option>
+                <option value="Trichal">Trichal</option>
+                <option value="Srinagar">Srinagar</option>
+            </select><br>
+            <label for="visit">Type of Visit</label>
+            <select class="dropdown" id="visit" name="visit">
+                <option disabled selected>-- Visit Type --</option>
+                <option value="General Checkup">General Checkup</option>
+                <option value="Consultation">Consultation</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Filling">Filling</option>
+                <option value="Root Canal">Root Canal</option>
+            </select><br>
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date"><br>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2026 Dentique by Adnan. | All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
