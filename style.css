@@ -1,0 +1,619 @@
+  :root {
+      --ink: #0c1b1a;
+      --cloud: #f5f2ea;
+      --mint: #8dd1c1;
+      --sun: #f3b35c;
+      --coral: #70c2f5;
+      --stone: #8c8c8c;
+  }
+
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+
+  .form {
+      max-width: 480px;
+      margin: 0px auto;
+      padding: 30px 28px;
+      background: linear-gradient(180deg, #ffffff, #e4ecf7);
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(0, 86, 179, 0.15);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+  }
+
+  .form label,
+  .form legend {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0a3d62;
+  }
+
+
+  .form input,
+  .form select {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      border-radius: 10px;
+      border: 1px solid #c7dcf5;
+      background: #ffffff;
+      font-size: 14px;
+      transition: all 0.3s ease;
+  }
+
+
+  .form input:focus,
+  .form select:focus {
+      outline: none;
+      border-color: #1e90ff;
+      box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+  }
+
+  .form fieldset {
+      border: 1px solid #c7dcf5;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 20px;
+  }
+
+
+  .form fieldset input[type="radio"] {
+      width: auto;
+      margin-right: 6px;
+      accent-color: #1e90ff;
+  }
+
+  .form fieldset label {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: 500;
+      color: #144272;
+  }
+
+
+  .form input[type="date"] {
+      color: #144272;
+  }
+
+  /* Submit Button */
+  .form button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1e90ff, #0a58ca);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Button Hover */
+  .form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(30, 144, 255, 0.35);
+  }
+
+  /* Button Active */
+  .form button:active {
+      transform: scale(0.98);
+  }
+
+
+  .form select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg fill='%231e90ff' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 18px;
+  }
+
+
+  body {
+      font-family: "DM Serif Display", "Georgia", serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #ffffff 0%, #b1bfc3 100%);
+      min-height: 100vh;
+  }
+
+  header {
+      height: 11vh;
+      padding: 18px 5vw;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      backdrop-filter: blur(10px);
+      border-bottom: 3px solid rgba(12, 27, 26, 0.08);
+  }
+
+  header ul {
+      margin-left: auto;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+  }
+
+  header .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+  }
+
+  .logo {
+      height: 70px;
+      margin-top: -12px;
+      margin-bottom: -12px;
+      width: auto;
+  }
+
+  header a,
+  header button {
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+
+
+  .btn-appointment {
+      position: relative;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      color: #04000c;
+      background: linear-gradient(135deg,
+              var(--sun),
+              var(--coral));
+      border: none;
+      cursor: pointer;
+      box-shadow:
+          0 10px 24px rgba(243, 179, 92, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      overflow: hidden;
+      transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+  }
+
+
+  .btn-appointment::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      background: linear-gradient(120deg,
+              rgba(255, 255, 255, 0.6),
+              transparent 60%);
+      opacity: 0.8;
+      pointer-events: none;
+  }
+
+
+  .btn-appointment:hover {
+      transform: translateY(-3px);
+      box-shadow:
+          0 16px 40px rgba(243, 179, 92, 0.45),
+          inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+
+  .btn-appointment:active {
+      transform: translateY(0) scale(0.97);
+      box-shadow:
+          0 8px 18px rgba(243, 179, 92, 0.3);
+  }
+
+  @keyframes appointmentPulse {
+      0% {
+          box-shadow: 0 0 0 0 rgba(243, 179, 92, 0.45);
+      }
+
+      70% {
+          box-shadow: 0 0 0 12px rgba(243, 179, 92, 0);
+      }
+
+      100% {
+          box-shadow: 0 0 0 0 rgba(243, 179, 92, 0);
+      }
+  }
+
+  .btn-appointment.attention {
+      animation: appointmentPulse 2.5s infinite;
+  }
+
+
+  main {
+      padding: 40px 5vw 80px;
+  }
+
+  .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      align-items: center;
+  }
+
+  .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: transparent;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #070707;
+  }
+
+  .hero h1 {
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: 1.05;
+      margin: 18px 0;
+  }
+
+  .hero p {
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #2a3836;
+      max-width: 520px;
+  }
+
+  .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+
+  }
+
+  .btn-primary,
+  .btn-secondary {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      font-weight: 600;
+      border: 2px transparent;
+      cursor: pointer;
+
+  }
+
+  .btn-primary {
+      background: var(--sun);
+      color: #04000c;
+      box-shadow: 0 14px 30px rgba(7, 7, 7, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-secondary {
+      background: var(--sun);
+      color: #04000c;
+      box-shadow: 0 14px 30px rgba(7, 7, 7, 0.25);
+  }
+
+  .btn-primary:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hero-card {
+      background: var(--cloud);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(12, 27, 26, 0.12);
+      position: relative;
+      overflow: hidden;
+  }
+
+  .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(243, 179, 92, 0.35), transparent 60%);
+  }
+
+  .hero-card-content {
+      position: relative;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  }
+
+  .hero-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+  }
+
+  .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+  }
+
+  .hero-card li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+  }
+
+  .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--sun);
+      flex-shrink: 0;
+  }
+
+  .section {
+      margin-top: 80px;
+
+  }
+
+  .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 28px;
+  }
+
+  .section-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+  }
+
+  .section-header p {
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      max-width: 520px;
+      color: #0a0a0a;
+  }
+
+  .logo-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 18px;
+      align-items: center;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+  }
+
+  .logo-strip span {
+      padding: 14px 18px;
+      border: 1px dashed rgba(12, 27, 26, 0.2);
+      border-radius: 999px;
+      text-align: center;
+      background-color: #59bad5;
+  }
+
+  .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+  }
+
+  .card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 18px 40px rgba(12, 27, 26, 0.08);
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  }
+
+  .card1 {
+      background-image: url(icons/profile.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 18px 40px rgba(12, 27, 26, 0.08);
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  }
+
+  .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+  }
+
+  .muted {
+      color: #2a3836;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  }
+
+  .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+  }
+
+  .step {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #ffffff;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  }
+
+  .step strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+  }
+
+  .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+  }
+
+  .metric {
+      background: #0c1b1a;
+      color: #fff;
+      border-radius: 20px;
+      padding: 18px;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  }
+
+  .metric span {
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: block;
+  }
+
+  .integration-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+  }
+
+  .tag {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(12, 27, 26, 0.2);
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  }
+
+  .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+  }
+
+  .pricing .card {
+      border: 2px solid rgba(12, 27, 26, 0.08);
+  }
+
+  .pricing .price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 12px 0;
+      font-family: "DM Serif Display", "Georgia", serif;
+  }
+
+  .case {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      align-items: center;
+      background: #fff4e5;
+      border-radius: 26px;
+      padding: 26px;
+  }
+
+  .faq {
+      display: grid;
+      gap: 14px;
+  }
+
+  .faq-item {
+      background: #f4f1f1;
+      border-radius: 18px;
+      padding: 18px;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      border: 1px solid rgba(12, 27, 26, 0.08);
+  }
+
+  .final-cta {
+      margin-top: 80px;
+      background: linear-gradient(120deg, rgba(143, 152, 231, 0.9), rgba(250, 249, 247, 0.9));
+      color: #080808;
+      border-radius: 30px;
+      padding: 32px;
+      display: grid;
+      gap: 16px;
+  }
+
+  .final-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .final-cta .btn-secondary {
+      border-color: #0b0b0b;
+      color: #040404;
+  }
+
+  .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 5vw;
+      text-align: center;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      color: var(--ink);
+  }
+
+  .social-bar {
+      position: fixed;
+      right: 1px;
+      padding: 5vw 15px;
+      top: 55%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      background: white;
+      z-index: 1000;
+      border-radius: 20px;
+
+  }
+
+  .social-bar a {
+      display: flex;
+      background-color: white;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .social-bar a:hover {
+      transform: translateX(-10px);
+      opacity: 0.75;
+  }
+
+  .social-bar img {
+      width: 35px;
+      height: 35px;
+  }
+
+
+
+
+  @media (max-width: 600px) {
+      header ul {
+          gap: 16px;
+      }
+
+      header button {
+          width: 100%;
+      }
+  }
