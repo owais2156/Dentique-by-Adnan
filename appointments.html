@@ -176,8 +176,9 @@
 
   <script src="script.js"></script>
   <script>
-    // Google Apps Script endpoint to handle appointment submissions
+    // Google Apps Script Web App endpoint (must end in /exec)
     const APPOINTMENT_ENDPOINT = "https://script.google.com/macros/s/AKfycbwE05_KqwjIK-RvpIxxfpXUVmh5dT-Ti4i5si71eNKxFmtLcUlaAPzoGbzUi5zv6xz8/exec";
+
     function handleSubmit(e) {
       e.preventDefault();
       const form = e.target;
@@ -202,15 +203,24 @@
         headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify(data)
       })
-        .then(() => {
-          btn.textContent = '✓ Appointment Requested!';
-          btn.style.background = '#2ecc71';
-          form.reset();
+        .then(res => res.json())
+        .then(result => {
+          if (result.result === 'success') {
+            btn.textContent = '✓ Appointment Requested!';
+            btn.style.background = '#2ecc71';
+            form.reset();
+          } else {
+            console.error('Server error:', result.error);
+            btn.textContent = '✗ Something went wrong';
+            btn.style.background = '#e74c3c';
+            alert('Sorry, there was a problem submitting your appointment. Please call us at +91 95415 73513.');
+          }
         })
-        .catch(() => {
-          btn.textContent = '✓ Appointment Requested!';
-          btn.style.background = '#2ecc71';
-          form.reset();
+        .catch(err => {
+          console.error('Network/fetch error:', err);
+          btn.textContent = '✗ Something went wrong';
+          btn.style.background = '#e74c3c';
+          alert('Sorry, there was a problem submitting your appointment. Please call us at +91 95415 73513.');
         })
         .finally(() => {
           setTimeout(() => {
