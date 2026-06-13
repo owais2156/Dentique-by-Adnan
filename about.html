@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Dentique by Adnan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .page-hero { padding: 140px 2rem 5rem; background: var(--off-white); border-bottom: 1px solid var(--border); }
+    .page-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .page-hero h1 { color: var(--navy); margin-bottom: 1rem; }
+    .page-hero p { font-size: 1.05rem; }
+
+    .about-stats { display: flex; gap: 2rem; margin-top: 2rem; }
+    .astat strong { font-family: var(--font-display); font-size: 2.2rem; color: var(--gold); display: block; }
+    .astat span { font-size: 0.8rem; color: var(--muted); }
+
+    .about-visual { background: var(--navy); border-radius: 24px; padding: 3rem; text-align: center; }
+    .about-visual-text { font-family: var(--font-display); font-size: 1.5rem; color: var(--white); line-height: 1.4; }
+    .about-visual-text em { color: var(--gold); }
+    .about-visual-badge { display: inline-block; padding: 0.5rem 1.2rem; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.3); border-radius: 50px; color: var(--gold); font-size: 0.82rem; font-weight: 600; margin-top: 1.5rem; }
+
+    .team-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .team-card { text-align: center; padding: 2rem; background: var(--off-white); border-radius: var(--radius); border: 1px solid var(--border); }
+    .team-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--navy); color: var(--gold); font-family: var(--font-display); font-size: 2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
+    .team-card h3 { color: var(--navy); margin-bottom: 0.25rem; }
+    .team-card .role { font-size: 0.8rem; color: var(--gold); font-weight: 600; margin-bottom: 0.75rem; display: block; }
+
+    .values-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .value-item { display: flex; gap: 1.2rem; padding: 1.5rem; background: var(--off-white); border-radius: var(--radius-sm); border: 1px solid var(--border); }
+    .value-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .value-item h3 { color: var(--navy); margin-bottom: 0.3rem; font-size: 1rem; }
+
+    @media (max-width: 800px) { .page-hero-inner, .team-grid, .values-grid { grid-template-columns: 1fr; } .about-stats { flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Dentique <em>by Adnan</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="appointments.html" class="nav-cta">Book Appointment</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="courses.html">Courses</a>
+      <a href="appointments.html">Book Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <div>
+          <span class="eyebrow">Our Story</span>
+          <h1>Modern dentistry with a human touch</h1>
+          <p>Founded by Dr. Adnan in Srinagar, Dentique was built on a single belief: that great dental care should never feel intimidating. We combine advanced technology with genuine warmth to make every visit something patients actually look forward to.</p>
+          <div class="about-stats">
+            <div class="astat"><strong>10+</strong><span>Years serving patients</span></div>
+            <div class="astat"><strong>2,400+</strong><span>Smiles transformed</span></div>
+            <div class="astat"><strong>4.9★</strong><span>Average rating</span></div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-visual-text">"Every smile we improve is a life <em>we've touched.</em>"</div>
+          <span class="about-visual-badge">— Dr. Aijaz Rahim Alaie, Co-Founder</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="eyebrow">The Team</span>
+        <h2>Meet our specialists</h2>
+        <p>A small, dedicated team united by a passion for precision and patient care.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">A</div>
+          <h3>Dr. Adnan</h3>
+          <span class="role">Founder & Lead Dentist</span>
+          <p>BDS, MDS — Oral & Maxillofacial Surgery. 5+ years of transforming smiles across the valley.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">S</div>
+          <h3>Dr. Aijaz Rahim Alaie</h3>
+          <span class="role">Cosmetic Dentist</span>
+          <p>Specialist in smile design, veneers, and aesthetic treatments with a gentle, artistic touch.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">R</div>
+          <h3>Dr. Arman Ahmad Khan</h3>
+          <span class="role">Orthodontist</span>
+          <p>Expert in clear aligners and braces, helping patients achieve perfectly aligned smiles.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-mint">
+      <div class="section-header">
+        <span class="eyebrow">What We Stand For</span>
+        <h2>Our values</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-item"><div class="value-icon">🤝</div><div><h3>Patient-first always</h3><p>Every decision is made with the patient's comfort, safety, and long-term health in mind.</p></div></div>
+        <div class="value-item"><div class="value-icon">🔬</div><div><h3>Evidence-based care</h3><p>We stay current with the latest research and use only proven, effective treatment methods.</p></div></div>
+        <div class="value-item"><div class="value-icon">💬</div><div><h3>Radical transparency</h3><p>No hidden fees, no surprise recommendations. You know what's happening at every step.</p></div></div>
+        <div class="value-item"><div class="value-icon">🌱</div><div><h3>Continuous growth</h3><p>Our team regularly attends training so you always receive the most current, skilled care.</p></div></div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="cta-content">
+        <h2>Come meet the team</h2>
+        <p>Book a visit and experience the Dentique difference for yourself.</p>
+        <div class="cta-actions">
+          <a href="appointments.html" class="btn-primary large">Book an Appointment</a>
+          <a href="services.html" class="btn-ghost-light large">View Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="padding: 2rem 0;">
+      <p>© 2026 Dentique by Adnan. All rights reserved by Owais.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

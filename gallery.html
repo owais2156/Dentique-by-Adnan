@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Dentique by Adnan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .page-hero { padding: 140px 2rem 4rem; text-align: center; background: var(--navy); }
+    .page-hero h1 { color: var(--white); margin-bottom: 0.75rem; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    .page-hero p { color: #8899BB; max-width: 500px; margin: 0 auto; }
+
+    .filter-bar { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; padding: 2.5rem 2rem 0; max-width: 900px; margin: 0 auto; }
+    .filter-btn { padding: 0.5rem 1.2rem; border: 1.5px solid var(--border); border-radius: 50px; font-size: 0.83rem; font-weight: 600; color: var(--muted); cursor: pointer; background: var(--white); font-family: var(--font-body); transition: all var(--transition); }
+    .filter-btn:hover, .filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    .gallery-grid { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .gallery-item { border-radius: var(--radius); overflow: hidden; background: var(--off-white); border: 1px solid var(--border); transition: all var(--transition); }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .gallery-photo { width: 100%; height: 220px; object-fit: cover; display: block; background: linear-gradient(135deg, var(--off-white) 0%, var(--mint) 100%); }
+    .gallery-info { padding: 1rem 1.2rem; }
+    .gallery-info h4 { font-family: var(--font-display); color: var(--navy); font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .gallery-info span { font-size: 0.75rem; color: var(--gold); font-weight: 600; }
+    .gallery-tag { display: inline-block; padding: 0.2rem 0.6rem; background: var(--mint); color: #1a7a5a; font-size: 0.68rem; font-weight: 600; border-radius: 50px; margin-left: 0.5rem; }
+
+    @media (max-width: 750px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 500px) { .gallery-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Dentique <em>by Adnan</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="appointments.html" class="nav-cta">Book Appointment</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="courses.html">Courses</a>
+      <a href="appointments.html">Book Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <span class="eyebrow">Results</span>
+      <h1>Our Work</h1>
+      <p>Real patient transformations — before and after. Every smile tells a story.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+      <button class="filter-btn" onclick="filterGallery('whitening', this)">Whitening</button>
+      <button class="filter-btn" onclick="filterGallery('veneers', this)">Veneers</button>
+      <button class="filter-btn" onclick="filterGallery('aligners', this)">Aligners</button>
+      <button class="filter-btn" onclick="filterGallery('implants', this)">Implants</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" data-cat="whitening"><img class="gallery-photo" src="gallery/whitening-1.jpg" alt="Zayn's Smile Makeover"><div class="gallery-info"><h4>Zayn's Smile Makeover</h4><span>Whitening</span><span class="gallery-tag">+4 shades</span></div></div>
+      <div class="gallery-item" data-cat="veneers"><img class="gallery-photo" src="gallery/veneers-1.jpg" alt="Aisha's Veneers"><div class="gallery-info"><h4>Ronaldo's Veneers( Not by US )</h4><span>Porcelain Veneers</span><span class="gallery-tag">6 veneers</span></div></div>
+      <div class="gallery-item" data-cat="aligners"><img class="gallery-photo" src="gallery/aligners-1.jpg" alt="Rohan's Alignment"><div class="gallery-info"><h4>Rohan's Alignment</h4><span>Clear Aligners</span><span class="gallery-tag">14 months</span></div></div>
+      <div class="gallery-item" data-cat="whitening"><img class="gallery-photo" src="gallery/whitening-2.jpg" alt="Sara's Brightening"><div class="gallery-info"><h4>Sara's Brightening</h4><span>Whitening + Polish</span><span class="gallery-tag">1 session</span></div></div>
+      <div class="gallery-item" data-cat="implants"><img class="gallery-photo" src="gallery/implants-1.jpg" alt="Ali's Implants"><div class="gallery-info"><h4>Ali's Implants</h4><span>Dental Implants</span><span class="gallery-tag">2 implants</span></div></div>
+      <div class="gallery-item" data-cat="veneers"><img class="gallery-photo" src="gallery/veneers-2.jpg" alt="Nadia's Smile Design"><div class="gallery-info"><h4>Nadia's Smile Design</h4><span>Composite Veneers</span><span class="gallery-tag">Full smile</span></div></div>
+      <div class="gallery-item" data-cat="aligners"><img class="gallery-photo" src="gallery/aligners-2.jpg" alt="Farhan's Correction"><div class="gallery-info"><h4>Farhan's Correction</h4><span>Clear Aligners</span><span class="gallery-tag">10 months</span></div></div>
+      <div class="gallery-item" data-cat="whitening"><img class="gallery-photo" src="gallery/whitening-3.jpg" alt="Meera's Refresh"><div class="gallery-info"><h4>Meera's Refresh</h4><span>Whitening</span><span class="gallery-tag">+10 shades</span></div></div>
+      <div class="gallery-item" data-cat="implants"><img class="gallery-photo" src="gallery/implants-2.jpg" alt="Umar's Restoration"><div class="gallery-info"><h4>Umar's Restoration</h4><span>Implant + Crown</span><span class="gallery-tag">Single tooth</span></div></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="padding: 2rem 0;">
+      <p>© 2026 Dentique by Adnan. All rights reserved by Owais.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        const show = cat === 'all' || item.dataset.cat === cat;
+        item.style.display = show ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

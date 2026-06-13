@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — Dentique by Adnan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .page-hero { padding: 140px 2rem 5rem; background: var(--off-white); border-bottom: 1px solid var(--border); text-align: center; }
+    .page-hero h1 { color: var(--navy); margin-bottom: 0.75rem; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    .page-hero p { max-width: 520px; margin: 0 auto 2rem; }
+    .page-hero-badges { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-badge-item { padding: 0.45rem 1rem; background: var(--white); border: 1px solid var(--border); border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: var(--text); }
+
+    .courses-grid { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .course-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: all var(--transition); }
+    .course-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .course-header { padding: 2rem 2rem 1rem; background: var(--navy); }
+    .course-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .course-header h3 { color: var(--white); font-size: 1.05rem; margin-bottom: 0.3rem; }
+    .course-header .level { font-size: 0.72rem; font-weight: 600; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
+    .course-body { padding: 1.5rem 2rem 2rem; }
+    .course-body p { font-size: 0.87rem; margin-bottom: 1.25rem; }
+    .course-meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+    .course-meta-item { font-size: 0.75rem; color: var(--muted); }
+    .course-meta-item strong { display: block; color: var(--navy); font-size: 0.82rem; }
+    .course-price { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
+    .enroll-btn { width: 100%; padding: 0.7rem; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.87rem; border-radius: 50px; border: none; cursor: pointer; font-family: var(--font-body); transition: all var(--transition); }
+    .enroll-btn:hover { background: #b8943e; }
+
+    @media (max-width: 850px) { .courses-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 550px) { .courses-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Dentique <em>by Adnan</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="appointments.html" class="nav-cta">Book Appointment</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="courses.html">Courses</a>
+      <a href="appointments.html">Book Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <span class="eyebrow">Education & Training</span>
+      <h1>Dental Courses by Dr. Adnan(Coming Soon)</h1>
+      <p>Hands-on training for dental professionals — from clinical fundamentals to advanced cosmetic techniques. Learn from a practitioner, not just a lecturer.</p>
+      <div class="page-hero-badges">
+        <span class="hero-badge-item">🎓 CPD Accredited</span>
+        <span class="hero-badge-item">🤝 Small Cohorts</span>
+        <span class="hero-badge-item">📍 Pulwama & Online</span>
+      </div>
+    </div>
+
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-header"><div class="course-icon">✨</div><h3>Composite Bonding Masterclass</h3><span class="level">Intermediate</span></div>
+        <div class="course-body"><p>A hands-on intensive covering direct composite techniques for diastema closure, reshaping, and smile enhancement.</p><div class="course-meta"><div class="course-meta-item"><strong>Duration</strong>2 days</div><div class="course-meta-item"><strong>Format</strong>In-person</div><div class="course-meta-item"><strong>Seats</strong>8 max</div></div><div class="course-price">₹18,000</div><button class="enroll-btn">Enrol Now</button></div>
+      </div>
+      <div class="course-card">
+        <div class="course-header"><div class="course-icon">😬</div><h3>Clear Aligner Fundamentals</h3><span class="level">Beginner</span></div>
+        <div class="course-body"><p>Everything you need to start offering clear aligner treatment — case selection, planning, refinements, and retention.</p><div class="course-meta"><div class="course-meta-item"><strong>Duration</strong>1 day</div><div class="course-meta-item"><strong>Format</strong>Hybrid</div><div class="course-meta-item"><strong>Seats</strong>12 max</div></div><div class="course-price">₹12,000</div><button class="enroll-btn">Enrol Now</button></div>
+      </div>
+      <div class="course-card">
+        <div class="course-header"><div class="course-icon">💉</div><h3>Facial Aesthetics for Dentists</h3><span class="level">Advanced</span></div>
+        <div class="course-body"><p>Botox and dermal filler training for licensed dental practitioners. Covers anatomy, consent, injection technique, and complications.</p><div class="course-meta"><div class="course-meta-item"><strong>Duration</strong>2 days</div><div class="course-meta-item"><strong>Format</strong>In-person</div><div class="course-meta-item"><strong>Seats</strong>6 max</div></div><div class="course-price">₹28,000</div><button class="enroll-btn">Enrol Now</button></div>
+      </div>
+      <div class="course-card">
+        <div class="course-header"><div class="course-icon">💎</div><h3>Veneer Preparation & Placement</h3><span class="level">Advanced</span></div>
+        <div class="course-body"><p>Porcelain and composite veneer workflows — from tooth prep to cementation, covering digital smile design integration.</p><div class="course-meta"><div class="course-meta-item"><strong>Duration</strong>3 days</div><div class="course-meta-item"><strong>Format</strong>In-person</div><div class="course-meta-item"><strong>Seats</strong>6 max</div></div><div class="course-price">₹35,000</div><button class="enroll-btn">Enrol Now</button></div>
+      </div>
+      <div class="course-card">
+        <div class="course-header"><div class="course-icon">🔬</div><h3>Oral Surgery Essentials</h3><span class="level">Intermediate</span></div>
+        <div class="course-body"><p>Practical extraction techniques, flap design, and management of surgical complications for general dental practitioners.</p><div class="course-meta"><div class="course-meta-item"><strong>Duration</strong>2 days</div><div class="course-meta-item"><strong>Format</strong>In-person</div><div class="course-meta-item"><strong>Seats</strong>10 max</div></div><div class="course-price">₹22,000</div><button class="enroll-btn">Enrol Now</button></div>
+      </div>
+      <div class="course-card">
+        <div class="course-header"><div class="course-icon">🎓</div><h3>Smile Design Online</h3><span class="level">All Levels</span></div>
+        <div class="course-body"><p>A self-paced digital course covering the principles of smile design — proportions, photography, mockups, and case presentation.</p><div class="course-meta"><div class="course-meta-item"><strong>Duration</strong>Self-paced</div><div class="course-meta-item"><strong>Format</strong>Online</div><div class="course-meta-item"><strong>Seats</strong>Unlimited</div></div><div class="course-price">₹4,999</div><button class="enroll-btn">Enrol Now</button></div>
+      </div>
+    </div>
+
+    <section class="final-cta">
+      <div class="cta-content">
+        <h2>Custom training for your team?</h2>
+        <p>We offer in-clinic group sessions tailored to your practice's specific needs. Get in touch to discuss.</p>
+        <div class="cta-actions">
+          <a href="appointments.html" class="btn-primary large">Enquire Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="padding: 2rem 0;">
+      <p>© 2026 Dentique by Adnan. All rights reserved by Owais.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Dentique by Adnan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .page-hero { padding: 140px 2rem 4rem; text-align: center; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .page-hero h1 { color: var(--white); margin-bottom: 0.75rem; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    .page-hero p { max-width: 500px; margin: 0 auto; color: #8899BB; }
+
+    .services-grid { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .svc-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; transition: all var(--transition); }
+    .svc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--gold-light); }
+    .svc-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    .svc-card h3 { color: var(--navy); margin-bottom: 0.5rem; }
+    .svc-card p { font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .svc-tag { display: inline-block; padding: 0.25rem 0.7rem; background: var(--mint); color: #1a7a5a; font-size: 0.7rem; font-weight: 600; border-radius: 50px; margin-bottom: 1rem; }
+    .svc-price { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--gold); }
+
+    @media (max-width: 800px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 550px) { .services-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Dentique <em>by Adnan</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="appointments.html" class="nav-cta">Book Appointment</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="courses.html">Courses</a>
+      <a href="appointments.html">Book Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <span class="eyebrow">What We Offer</span>
+      <h1>Our Services</h1>
+      <p>Comprehensive dental care for every stage of your smile journey — routine to transformative.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card"><div class="svc-icon">🔍</div><span class="svc-tag">Routine</span><h3>General Checkup</h3><p>Full examination, cleaning, and X-rays to keep your oral health on track.</p><div class="svc-price">From ₹999</div></div>
+      <div class="svc-card"><div class="svc-icon">✨</div><span class="svc-tag">Cosmetic</span><h3>Teeth Whitening</h3><p>Professional whitening up to 8 shades brighter in a single comfortable session.</p><div class="svc-price">From ₹2,499</div></div>
+      <div class="svc-card"><div class="svc-icon">💎</div><span class="svc-tag">Premium</span><h3>Veneers</h3><p>Porcelain or composite veneers crafted to transform your smile's shape and colour.</p><div class="svc-price">From ₹8,999</div></div>
+      <div class="svc-card"><div class="svc-icon">🦷</div><span class="svc-tag">Restorative</span><h3>Dental Implants</h3><p>Permanent, natural-looking tooth replacements that last a lifetime with proper care.</p><div class="svc-price">From ₹25,000</div></div>
+      <div class="svc-card"><div class="svc-icon">😬</div><span class="svc-tag">Orthodontics</span><h3>Clear Aligners</h3><p>Invisible, removable aligners to straighten teeth without traditional metal braces.</p><div class="svc-price">From ₹40,000</div></div>
+      <div class="svc-card"><div class="svc-icon">👨‍👩‍👧</div><span class="svc-tag">Family</span><h3>Paediatric Care</h3><p>Gentle, friendly dental care for children of all ages from first tooth onwards.</p><div class="svc-price">From ₹599</div></div>
+      <div class="svc-card"><div class="svc-icon">⚡</div><span class="svc-tag">Urgent</span><h3>Emergency Visit</h3><p>Same-week slots for toothaches, broken teeth, and urgent dental needs.</p><div class="svc-price">Call us</div></div>
+      <div class="svc-card"><div class="svc-icon">🎨</div><span class="svc-tag">Cosmetic</span><h3>Smile Design</h3><p>A complete digital preview of your new smile before any treatment begins.</p><div class="svc-price">From ₹1,999</div></div>
+      <div class="svc-card"><div class="svc-icon">🛡️</div><span class="svc-tag">Preventive</span><h3>Fluoride & Sealants</h3><p>Protective treatments to strengthen enamel and prevent cavities for years ahead.</p><div class="svc-price">From ₹499</div></div>
+    </div>
+
+    <section class="final-cta">
+      <div class="cta-content">
+        <h2>Not sure which service you need?</h2>
+        <p>Book a free consultation and we'll build a plan around your smile goals.</p>
+        <div class="cta-actions">
+          <a href="appointments.html" class="btn-primary large">Book a Free Consult</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="padding: 2rem 0;">
+      <p>© 2026 Dentique by Adnan. All rights reserved by Owais.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
